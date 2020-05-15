@@ -1,0 +1,269 @@
+<resources>
+    <string name="app_name">Promoters</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cat_card_rich_media_image_view_description">Descrição</string>
+    <string name="cat_card_rich_media_view_title">Equipe 02</string>
+    <string name="cat_card_rich_media_rating_view_description">Rating</string>
+    <string name="cat_card_rich_media_ratxing_text">4,5 (30)</string>
+    <string name="cat_card_rich_media_view_secondary_line_text">Texto secundário</string>
+    <string name="cat_card_selectable_content">Atividades realizadas em conjunto humlide da comunidade do Rio de Janeriro</string>
+    <string name="cat_card_rich_media_view_subtitle">Atividades realizadas</string>
+    <string name="cat_card_rich_media_chip_title_1">Camisas masculinas</string>
+    <string name="cat_card_rich_media_chip_title_2">Camisas femininas</string>
+    <string name="cat_card_rich_media_chip_title_3">Camisas para adultos</string>
+    <string name="cat_card_rich_media_chip_title_4">Camisas para criança</string>
+    <string name="cat_card_rich_media_action_1">Próximo</string>
+    <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+    <string name="extended_fab_label">Foto do Local</string>
+
+    <string-array name="promotores">
+        <item>Diogo</item>
+        <item>Deise</item>
+        <item>Flavia</item>
+        <item>Geane</item>
+        <item>Igor</item>
+        <item>Jionaldo</item>
+        <item>Josimaria</item>
+        <item>Luciene</item>
+        <item>Rosilene</item>
+        <item>Vanielle</item>
+        <item>Wendell</item>
+    </string-array>
+
+    <string-array name="clientes">
+        <item>ATALAIA RAÇÕES</item>
+        <item>DELICATESSEN SANTA CECILIA</item>
+        <item>SUPER MINI (PONTO NOVO)</item>
+        <item>SUPERMERCADO ANCHIETÃO</item>
+        <item>MANUEL NUNES MERCADO</item>
+        <item>MARIA MARLUCE</item>
+        <item>RAÇÃO E CIA</item>
+        <item>ROQUE MERCADO</item>
+        <item>ROSA MARIA</item>
+        <item>NUTRI PET RAÇÕES</item>
+        <item>COMERCIAL BOA ESPERANÇA</item>
+        <item>AGRO CEREAIS</item>
+        <item>CAMPO VERDE</item>
+        <item>RENATO BARRETO</item>
+        <item>MASTER PREMIUM</item>
+        <item>MIX RAÇÕES E VARIEDADES</item>
+        <item>PERENILTON</item>
+        <item>ALINE FEITOSA</item>
+        <item>SUPERMERCADO SÃO MIGUEL</item>
+        <item>SUPERMERCADO SIMIÃO</item>
+        <item>CAMILA</item>
+        <item>COMAP</item>
+        <item>SEVERINA</item>
+        <item>SUPERMERCADO FAMILIA ANDRADE</item>
+        <item>MERCADINHO MERCANTE</item>
+        <item>CASA DO VAQUEIRO</item>
+        <item>AGROVETERINARIA CENTRO SUL</item>
+        <item>BISMARC</item>
+        <item>PET SHOW</item>
+        <item>AQUARIUM CLINICA e PET SHOP</item>
+        <item>PET VILLE</item>
+        <item>DIEGO RAÇÕES</item>
+        <item>SUPERMERCADO RECIFE</item>
+        <item>SUPERMERCADO SANTO ANTONIO</item>
+        <item>KI BARATO MARUIM</item>
+        <item>MINIMERCADO 2 IRMÃOS</item>
+        <item>MERCADINHO FONSECA E ALVES</item>
+        <item>SUPERMERCADO DA FAMILIA</item>
+        <item>PANIFICAÇÃO ADRIANO ANDRADE</item>
+        <item>SUPERMERCADO LACERDÃO</item>
+        <item>AGROPECUARIA SALMERON</item>
+        <item>AGROVEL (OSVALDO ARANHA)</item>
+        <item>AGROVEL (TREZE DE JULHO)</item>
+        <item>AGROVEL (CENTRO)</item>
+        <item>COMERCIAL SÃO DOMINGOS</item>
+        <item>COMERCIAL SÃO JORGE</item>
+        <item>MAIS RAÇÕES</item>
+        <item>SUPERMERCADO JUNIMAR</item>
+        <item>SUPERMERCADO BARRETO</item>
+        <item>MEGA SUPERMERCADO (MATRIZ)</item>
+        <item>SUPERMERCADO BOMBOM</item>
+        <item>SUPERMERCADO EBENEZER (CIDADE NOVA)</item>
+        <item>SUPERMERCADO ITAPREÇO</item>
+        <item>MEGA SUPERMERCADO (FILIAL)</item>
+        <item>SUPERMERCADO EBENEZER (STA CRUZ)</item>
+        <item>LOJÃO FASOUTO (ESTÂNCIA)</item>
+        <item>SUPERMERCADO PRADO VASCONCELOS</item>
+        <item>SUPERMERCADO HIPER GUIA</item>
+        <item>SUPERMERCADO BARBOSA</item>
+        <item>KI BARATO CANINDÉ</item>
+        <item>PREÇO DOCE</item>
+        <item>HIPER PADRE CICERO</item>
+        <item>MERCEARIA JOHN WILLIAM</item>
+        <item>KI BARATO GLORIA</item>
+        <item>NUNES PEIXOTO GLORIA</item>
+        <item>SUPERMERCADO ITADORENSE</item>
+        <item>VIA COMPRAS</item>
+        <item>SUPERMERCADO UNIÃO</item>
+        <item>SUPERMERCADO 2000</item>
+        <item>SUPERMERCADO SOBRINHO</item>
+        <item>SUPERMERCADO MARAJÁ</item>
+        <item>SUPERMERCADO DO POVO</item>
+        <item>SUPERMERCADO SÃO JORGE</item>
+        <item>KI BARATO NEOPOLIS</item>
+        <item>LUANA SUPERMERCADO</item>
+        <item>KI BARATO PROPRIÁ</item>
+        <item>SUPERMERCADO BEIRA RIO</item>
+        <item>SUPERMERCADO MARIZA</item>
+        <item>SUPERMERCADO UNIÃO</item>
+        <item>DESCONTÃO CEASA</item>
+        <item>SUPER TEM (BEIRA MAR)</item>
+        <item>SUPERMERCADO RODRIGO</item>
+        <item>SUPERMERCADO SÃO PEDRO</item>
+        <item>SUPERMERCADO TABAJARA</item>
+        <item>SUPER TEM (ARUANA)</item>
+        <item>SUPERMERCADO PASSEO</item>
+        <item>LOJÃO FASOUTO (ARACAJU)</item>
+        <item>MESSIAS PEIXOTO (CENTRO)</item>
+        <item>NUNES PEIXOTO (ITABAIANA)</item>
+        <item>IRMÃOS PEIXOTO</item>
+        <item>MESSIAS PEIXOTO (SHOPPING)</item>
+        <item>SUPERMERCADO SUPER COMPRAS</item>
+        <item>SUPERMERCADO VASCONCELOS</item>
+        <item>SUPERMERCADO COUTO</item>
+        <item>SUPERMERCADO LIMA</item>
+        <item>SUPERMERCADO POPULAR</item>
+        <item>LOJÃO FASOUTO (LAGARTO)</item>
+        <item>FAMILIA ANDRADE</item>
+        <item>SUPERMERCADO COUTO</item>
+        <item>SUPERMERCADO SOUZA</item>
+        <item>SUPERMERCADO SANTA RITA</item>
+        <item>FF RAÇÕES</item>
+        <item>LOJÃO AGRICOLA</item>
+        <item>ROBERTO RAÇÕES</item>
+        <item>CARDOSO RAÇÕES</item>
+        <item>AGROBARRA</item>
+        <item>FF RAÇÕES</item>
+        <item>AGRO CENTER</item>
+        <item>SUPERMERCADO SUPERLAR</item>
+        <item>AGRO FERTIL</item>
+        <item>JOSINALDO BARRETO</item>
+        <item>MN CONSTRUÇÕES (mesmo agrofertil)</item>
+        <item>TERRA FERTIL</item>
+        <item>LOJÃO FASOUTO (TOBIAS BARRETO)</item>
+        <item>RECANTO DOS BICHOS</item>
+        <item>TANGARA RAÇÕES</item>
+        <item>ATAREJO JK</item>
+        <item>DESKONTÃO CENTRO</item>
+        <item>SUPER MINI (ATALAIA)</item>
+        <item>SUPER MINI (COROA DO MEIO)</item>
+        <item>SUPERMERCADO GONZAGA</item>
+        <item>SUPERMERCADO J TRINDADE</item>
+        <item>CASA DA RAÇÃO</item>
+        <item>SUPER MINI (BARRA)</item>
+        <item>SUPERMERCADO DELICIA</item>
+        <item>FEIRÃO DA ECONOMIA</item>
+        <item>MERCADINHO MENOR PREÇO</item>
+        <item>LOJÃO FASOUTO (SOCORRO)</item>
+        <item>ATACAREJO MCR</item>
+        <item>AFRA SUPERMERCADO</item>
+        <item>REDE MAIS (AMERICA)</item>
+        <item>SUPER TEM (TREZE DE JULHO)</item>
+        <item>SUPERMERCADO PRISCILA</item>
+        <item>REDE MAIS (SALGADO FILHO)</item>
+        <item>REDE MAIS (INACIO BARBOSA)</item>
+        <item>REDE MAIS (MOSQUEIRO)</item>
+        <item>REDE MAIS (FAROLANDIA)</item>
+        <item>REDE MAIS (ZONA DE EXPANSÃO)</item>
+        <item>SUPER MINI (SALGADO FILHO)</item>
+        <item>SUPER TEM (GRAGERU)</item>
+        <item>SUPER TEM (FAROLANDIA)</item>
+        <item>SUPER TEM (JABOTINA)</item>
+        <item>SUPER TEM (AEROPORTO)</item>
+        <item>SUPER TEM (J. CONRADO)</item>
+        <item>REDE MAIS (BARRA)</item>
+        <item>SUPERMERCADO PRADO VASCONCELOS</item>
+        <item>REDE MAIS (PALESTINA)</item>
+    </string-array>
+
+
+    <string-array name="cidades">
+        <item>Amparo de Sao Francisco</item>
+        <item>Aquidaba</item>
+        <item>Aracaju</item>
+        <item>Araua</item>
+        <item>Areia Branca</item>
+        <item>Barra dos Coqueiros</item>
+        <item>Boquim</item>
+        <item>Brejo Grande</item>
+        <item>Campo do Brito</item>
+        <item>Canhoba</item>
+        <item>Caninde de Sao Francisco</item>
+        <item>Capela</item>
+        <item>Carira</item>
+        <item>Carmopolis</item>
+        <item>Cedro de Sao Joao</item>
+        <item>Cristinapolis</item>
+        <item>Cumbe</item>
+        <item>Divina Pastora</item>
+        <item>Estancia</item>
+        <item>Feira Nova</item>
+        <item>Frei Paulo</item>
+        <item>Gararu</item>
+        <item>General Maynard</item>
+        <item>Gracho Cardoso</item>
+        <item>Ilha das Flores</item>
+        <item>Indiaroba</item>
+        <item>Itabaiana</item>
+        <item>Itabaianinha</item>
+        <item>Itabi</item>
+        <item>Itaporanga d Ajuda</item>
+        <item>Japaratuba</item>
+        <item>Japoata</item>
+        <item>Lagarto</item>
+        <item>Laranjeiras</item>
+        <item>Macambira</item>
+        <item>Malhada dos Bois</item>
+        <item>Malhador</item>
+        <item>Maruim</item>
+        <item>Moita Bonita</item>
+        <item>Monte Alegre de Sergipe</item>
+        <item>Muribeca</item>
+        <item>Neopolis</item>
+        <item>Nossa Senhora Aparecida</item>
+        <item>Nossa Senhora da Gloria</item>
+        <item>Nossa Senhora das Dores</item>
+        <item>Nossa Senhora de Lourdes</item>
+        <item>Nossa Senhora do Socorro</item>
+        <item>Pacatuba</item>
+        <item>Pedra Mole</item>
+        <item>Pedrinhas</item>
+        <item>Pinhao</item>
+        <item>Pirambu</item>
+        <item>Poco Redondo</item>
+        <item>Poco Verde</item>
+        <item>Porto da Folha</item>
+        <item>Propria</item>
+        <item>Riachao do Dantas</item>
+        <item>Riachuelo</item>
+        <item>Ribeiropolis</item>
+        <item>Rosario do Catete</item>
+        <item>Salgado</item>
+        <item>Santa Luzia do Itanhy</item>
+        <item>Santa Rosa de Lima</item>
+        <item>Santana do Sao Francisco</item>
+        <item>Santo Amaro das Brotas</item>
+        <item>Sao Cristovao</item>
+        <item>Sao Domingos</item>
+        <item>Sao Francisco</item>
+        <item>Sao Miguel do Aleixo</item>
+        <item>Simao Dias</item>
+        <item>Siriri</item>
+        <item>Telha</item>
+        <item>Tobias Barreto</item>
+        <item>Tomar do Geru</item>
+        <item>Umbauba</item>
+    </string-array>
+
+
+    <dimen name="margim_8dp">8dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margim_20dp">50dp</dimen>
+    <dimen name="text_size_25sp">25sp</dimen>
+</resources>

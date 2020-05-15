@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cat_card_rich_media_demo_min_height">148dp</dimen>
+    <dimen name="cat_card_double_spacing">16dp</dimen>
+    <dimen name="cat_card_single_spacing">8dp</dimen>
+    <dimen name="cat_card_triple_spacing">24dp</dimen>
+    <dimen name="LayoutPadding_16dp">16dp</dimen>
+    <dimen name="LayoutPadding_8dp">8dp</dimen>
+    <dimen name="margins">8dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+</resources>

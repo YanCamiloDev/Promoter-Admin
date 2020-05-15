@@ -1,0 +1,2 @@
+rootProject.name='Promoter Adm'
+include ':app'
