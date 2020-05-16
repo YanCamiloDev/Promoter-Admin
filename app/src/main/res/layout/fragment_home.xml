@@ -11,17 +11,34 @@
     </data>
 
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <LinearLayout
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fff"
+        android:orientation="vertical"
         android:fitsSystemWindows="true"
         tools:context=".principal.HomeFragment">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            style="@style/Widget.MaterialComponents.AppBarLayout.Surface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:layout_scrollFlags="scroll"
+                app:menu="@menu/menu_home"
+                app:title="Promoter Adm" />
+
+        </com.google.android.material.appbar.AppBarLayout>
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_marginBottom="70dp"
+            android:paddingBottom="10dp"
             android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
@@ -32,42 +49,7 @@
 
         </androidx.core.widget.NestedScrollView>
 
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:fitsSystemWindows="true"
-            app:elevation="5dp"
-            app:navigationContentDescription="Decript"
-            app:navigationIcon="@drawable/ic_menu_black_24dp" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Descrp"
-            app:layout_anchor="@id/bar"
-            android:clickable="true"
-            android:onClick="@{() -> viewModel.addLocalAndVenda()}"
-            app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
-
-
-        <FrameLayout
-            android:id="@+id/bottom_drawer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="16dp"
-            app:behavior_hideable="true"
-            app:behavior_peekHeight="0dp"
-            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-
-            <com.google.android.material.navigation.NavigationView
-                android:id="@+id/navigation_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:menu="@menu/demo_primary" />
-        </FrameLayout>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
 
 </layout>

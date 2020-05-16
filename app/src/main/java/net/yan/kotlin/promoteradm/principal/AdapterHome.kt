@@ -2,16 +2,8 @@ package net.yan.kotlin.promoteradm.principal
 
 
 import android.annotation.SuppressLint
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
-import androidx.recyclerview.selection.ItemDetailsLookup
-import androidx.recyclerview.selection.ItemDetailsLookup.ItemDetails
-import androidx.recyclerview.selection.ItemKeyProvider
-import androidx.recyclerview.selection.SelectionTracker
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -21,8 +13,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import net.yan.kotlin.promoteradm.databinding.CardHomeRecBinding
 import net.yan.kotlin.promoteradm.model.PromPontos
-import net.yan.kotlin.promoteradm.model.Promoter
-import java.util.*
 
 class AdapterHome(val click: Clique) :
     ListAdapter<Data, RecyclerView.ViewHolder>(ClienteCallBack()){
@@ -82,6 +72,15 @@ class AdapterHome(val click: Clique) :
             fun from(parent: ViewGroup): MyViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = CardHomeRecBinding.inflate(inflater, parent, false)
+                /*
+                val shapes = SparseArray<ShapeAppearanceModel>()
+
+                shapes.put(
+                    binding.roundPerfil,
+                    ShapeAppearanceModel.builder().setAllCornerSizes(ShapeAppearanceModel.PILL).build()
+                )
+
+                 */
                 return MyViewHolder(binding)
             }
         }
@@ -91,7 +90,6 @@ class AdapterHome(val click: Clique) :
 
 class ClienteCallBack : DiffUtil.ItemCallback<Data>() {
     override fun areItemsTheSame(oldItem: Data, newItem: Data): Boolean {
-        Log.i("Dados", "NOVO: "+newItem.promotor.id + ", ANTIGO: "+oldItem.promotor.id)
         return oldItem.promotor.id == newItem.promotor.id
     }
 
