@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
   <item
-      android:id="@+id/tt"
-      android:title="Teste"
+      android:id="@+id/pesquisa"
+      android:icon="@drawable/ic_sort_by_alpha_black_24dp"
+      android:title="Pesquisar Publicações"
       app:showAsAction="ifRoom"/>
   <item
-      android:title="Teste"
+      android:id="@+id/arquivos"
+      android:icon="@drawable/ic_view_list_black_24dp"
+      android:title="Arquivos"
       app:showAsAction="ifRoom"/>
   <item
-      android:title="Teste"
+      android:id="@+id/coonfiguracoes"
+      android:icon="@drawable/ic_settings_black_24dp"
+      android:title="Configurações"
       app:showAsAction="ifRoom"/>
   <item
-      android:title="Teste"
+      android:id="@+id/exxx"
+      android:icon="@drawable/exit"
+      android:title="Sair"
       app:showAsAction="ifRoom"/>
 </menu>

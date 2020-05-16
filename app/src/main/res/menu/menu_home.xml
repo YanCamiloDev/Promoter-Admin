@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_sort"
+        android:icon="@drawable/ic_sort_by_alpha_black_24dp"
+        android:title=""
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/item_list_type"
+        android:icon="@drawable/ic_view_list_black_24dp"
+        android:title=""
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/exit"
+        android:title="Sair"
+        app:showAsAction="never" />
+</menu>
