@@ -10,6 +10,10 @@
         tools:layout="@layout/fragment_home"
         android:label="HomeFragment" >
         <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
             android:id="@+id/action_homeFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
 
@@ -20,6 +24,10 @@
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_cadastroFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
             app:destination="@id/cadastroFragment" />
     </fragment>
     <fragment
@@ -28,6 +36,10 @@
         android:label="CadastroFragment" >
         <action
             android:id="@+id/action_cadastroFragment_to_continuacaoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
             app:destination="@id/continuacaoFragment" />
     </fragment>
     <fragment
@@ -46,9 +58,17 @@
             android:defaultValue='""' />
         <action
             android:id="@+id/action_continuacaoFragment_to_cadastroFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
             app:destination="@id/cadastroFragment" />
         <action
             android:id="@+id/action_continuacaoFragment_to_loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
             app:destination="@id/loginFragment" />
     </fragment>
 

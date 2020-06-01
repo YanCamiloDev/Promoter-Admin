@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.*
-import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
@@ -41,7 +41,7 @@ class ContinuacaoFragment : Fragment() {
         viewModel =
             ViewModelProviders.of(this, viewModelFactory).get(ContinuacaoViewModel::class.java)
         binding.viewModel = viewModel
-        binding.setLifecycleOwner(this)
+        binding.lifecycleOwner = this
         binding.email = argumentos.email
         binding.senha = argumentos.senha
 
@@ -53,15 +53,27 @@ class ContinuacaoFragment : Fragment() {
             }
         }
 
+        viewModel.load.observe(viewLifecycleOwner, Observer {
+            if (it == true) {
+                binding.load.visibility = View.VISIBLE
+                activity?.window?.setFlags(
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
+                )
+            }
+        })
         viewModel.error.observe(viewLifecycleOwner, Observer {
-            if (it.first == 3){
-                Snackbar.make(binding.root, it.second, Snackbar.LENGTH_LONG). show()
+            if (it.first == 3) {
+                Snackbar.make(binding.root, it.second, Snackbar.LENGTH_LONG).show()
             }
         })
 
         viewModel.isCadastrado.observe(viewLifecycleOwner, Observer {
-            if (it == true){
+            if (it == true) {
                 findNavController().navigate(ContinuacaoFragmentDirections.actionContinuacaoFragmentToLoginFragment())
+                activity?.window?.clearFlags(
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE
+                )
             }
         })
 
@@ -92,7 +104,7 @@ class ContinuacaoFragment : Fragment() {
             binding.circleImageViewFotoPerfil.setImageBitmap(imageBitmap)
             binding.bitMap = imageBitmap
             Log.i("BitMap", binding.bitMap.toString())
-            binding.nome = binding.log.text.toString()
+            binding.nome = binding.name.text.toString()
         }
 
     }

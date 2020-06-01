@@ -1,14 +1,13 @@
 package net.yan.kotlin.promoteradm.data
 
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
-class FirebaseHelper() {
+class FirebaseHelper {
     var auth: FirebaseAuth? = null
-    var database: DatabaseReference? = null
+    var database: FirebaseFirestore? = null
     var storage: StorageReference? = null
 
     init {
@@ -25,7 +24,7 @@ class FirebaseHelper() {
 
     fun getFireDataBase(){
         if (database == null){
-            database = FirebaseDatabase.getInstance().reference
+            database = FirebaseFirestore.getInstance()
         }
     }
 

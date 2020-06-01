@@ -2,16 +2,12 @@ package net.yan.kotlin.promoteradm.principal
 
 
 import android.content.res.Resources
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.ChildEventListener
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
+import kotlinx.coroutines.tasks.await
 import net.yan.kotlin.promoteradm.data.FirebaseHelper
 import net.yan.kotlin.promoteradm.model.PromPontos
 
@@ -30,40 +26,30 @@ class HomeViewModel(
     init {
         val user = dataSource.auth?.currentUser
         estaLogado.value = user == null
-        val ref = dataSource.database?.child("Promoter_Ponto")
-
         if (estaLogado.value != true) {
             uiScope.launch {
-                if (listProm == null) {
-                    listProm = MutableLiveData<Array<PromPontos>>()
-                    ref!!.addChildEventListener(object : ChildEventListener {
-                        override fun onCancelled(p0: DatabaseError) {
-
-                        }
-
-                        override fun onChildMoved(p0: DataSnapshot, p1: String?) {
-
-                        }
-
-                        override fun onChildChanged(p0: DataSnapshot, p1: String?) {
-
-                        }
-
-                        override fun onChildAdded(p0: DataSnapshot, p1: String?) {
-                            val promPontos = p0.getValue(PromPontos::class.java)
-                            promPontos?.id = p0.key.toString()
-                            listaOfPass.add(0, promPontos!!)
-                            listProm!!.value = listaOfPass.toTypedArray()
-                        }
-
-                        override fun onChildRemoved(p0: DataSnapshot) {
-
-                        }
-
-                    })
-                }
-
+                consultar()
             }
+        }
+    }
+
+    suspend fun consultar() {
+        try {
+            listProm = MutableLiveData<Array<PromPontos>>()
+            val ref = dataSource.database!!.collection("Promoter_Ponto")
+                .orderBy("data", com.google.firebase.firestore.Query.Direction.DESCENDING)
+                .limit(50).get().await()
+            withContext(Dispatchers.Main) {
+                ref.documents.forEach {
+                    val promPontos = it.toObject(PromPontos::class.java)
+                    promPontos!!.id = it.id
+                    listaOfPass.add(promPontos)
+                    listProm!!.value = listaOfPass.toTypedArray()
+                    Log.i("DADOS", "PASSOU")
+                }
+            }
+        } catch (e: Exception) {
+            Log.i("ERRO", e.message.toString())
         }
     }
 
@@ -72,16 +58,12 @@ class HomeViewModel(
         estaLogado.value = true
     }
 
-    fun addLocalAndVenda() {
+    fun like() {
         newPhoto.value = true
     }
 
-    fun addLocalAndVendaClose() {
+    fun likeExit() {
         newPhoto.value = false
-    }
-
-    fun novaTela() {
-        estaLogado.value = false
     }
 
     override fun onCleared() {

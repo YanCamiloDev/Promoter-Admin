@@ -15,9 +15,10 @@
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
         android:background="#fff"
-        android:orientation="vertical"
         android:fitsSystemWindows="true"
+        android:orientation="vertical"
         tools:context=".principal.HomeFragment">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -36,20 +37,39 @@
                 app:title="Promoter Adm" />
 
         </com.google.android.material.appbar.AppBarLayout>
-        <androidx.core.widget.NestedScrollView
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:paddingBottom="10dp"
             android:layout_height="match_parent">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recy"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/neshed"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent">
 
-        </androidx.core.widget.NestedScrollView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.core.widget.NestedScrollView>
 
 
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape"
+                android:indeterminateTint="#000"
+                android:indeterminateTintMode="src_atop"
+                android:progress="5"
+                android:visibility="visible"
+                tools:targetApi="lollipop" />
+
+        </FrameLayout>
     </LinearLayout>
+
 
 </layout>

@@ -7,12 +7,13 @@ apply plugin: "androidx.navigation.safeargs.kotlin"
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
-    android.defaultConfig.vectorDrawables.useSupportLibrary = true
+
     dataBinding {
         enabled = true
     }
     defaultConfig {
         applicationId "net.yan.kotlin.promoteradm"
+        vectorDrawables.useSupportLibrary = true
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
@@ -38,8 +39,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta6'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -48,25 +49,24 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
-    /*Dependências firebase*/
-    implementation 'com.google.firebase:firebase-core:17.4.1'
+    //FIREBASE
+    implementation 'com.google.firebase:firebase-core:17.4.2'
+    implementation 'com.google.firebase:firebase-firestore:21.4.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
     implementation 'com.google.firebase:firebase-database:19.3.0'
     implementation 'com.google.firebase:firebase-storage:19.1.1'
     implementation 'com.google.firebase:firebase-auth:19.3.1'
     implementation 'com.firebaseui:firebase-ui-storage:0.6.0'
+
+
     implementation 'com.android.support:multidex:1.0.3'
-    /*Dependências para abas*/
-    implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
-    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
 
     implementation 'androidx.recyclerview:recyclerview-selection:1.0.0'
-
-    implementation "com.android.support:support-annotations:28.0.0"
-    annotationProcessor "com.android.support:support-annotations:28.0.0"
     implementation 'com.github.bumptech.glide:glide:4.11.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+
     /*Dependência para arredondamento de imagens*/
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
@@ -75,7 +75,11 @@ dependencies {
     //COUROTINES
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1'
 
+    def paging_version = "2.1.2"
+
+    implementation "androidx.paging:paging-runtime:$paging_version"
     // Navigation
     implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0'
     implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0'
@@ -89,7 +93,7 @@ dependencies {
 
     //RECYCLERVIEW
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
-
+    implementation 'com.google.firebase:firebase-common-ktx:16.1.0'
     kapt 'com.android.databinding:compiler:3.1.4'
 
 }

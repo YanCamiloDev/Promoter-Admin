@@ -3,4 +3,20 @@ package net.yan.kotlin.promoteradm.model
 
 import com.google.firebase.database.Exclude
 
-data class Promoter(@Exclude var id: String= "", var email: String="", @Exclude var senha: String = "", var foto: String = "", var nome: String = "" )
+class Promoter {
+
+    var id: String = ""
+        @Exclude
+        get
+    var email: String = ""
+
+    var senha: String = ""
+        @Exclude
+        get
+
+    var foto: String = ""
+
+    var nome: String? = ""
+
+
+}

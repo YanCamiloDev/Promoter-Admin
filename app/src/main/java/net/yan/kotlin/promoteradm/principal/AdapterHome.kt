@@ -34,7 +34,7 @@ class AdapterHome(val click: Clique) :
         when (holder) {
             is MyViewHolder -> {
                 val nightItem = getItem(position) as Data.DataItem
-                holder.bind(click, nightItem.promotor)
+                holder.bind(click, nightItem.promotor, position)
             }
         }
     }
@@ -59,11 +59,12 @@ class AdapterHome(val click: Clique) :
 
         fun bind(
             click: Clique,
-            pp: PromPontos
+            pp: PromPontos,
+            view: Int
         ) {
             binding.promPontos = pp
             binding.click = click
-
+            binding.view = view
             binding.executePendingBindings()
         }
 
@@ -72,19 +73,11 @@ class AdapterHome(val click: Clique) :
             fun from(parent: ViewGroup): MyViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = CardHomeRecBinding.inflate(inflater, parent, false)
-                /*
-                val shapes = SparseArray<ShapeAppearanceModel>()
-
-                shapes.put(
-                    binding.roundPerfil,
-                    ShapeAppearanceModel.builder().setAllCornerSizes(ShapeAppearanceModel.PILL).build()
-                )
-
-                 */
                 return MyViewHolder(binding)
             }
         }
     }
+
 
 }
 
@@ -100,8 +93,8 @@ class ClienteCallBack : DiffUtil.ItemCallback<Data>() {
 
 }
 
-class Clique(val clickListener: (promPontos: PromPontos) -> Unit) {
-    fun onClick(nome: PromPontos) = clickListener(nome)
+class Clique(val clickListener: (promPontos: PromPontos, view: Int) -> Unit) {
+    fun onClick(nome: PromPontos, view: Int) = clickListener(nome, view)
 }
 
 sealed class Data {
